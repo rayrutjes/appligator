@@ -87,10 +87,10 @@ main {
     margin: 5px;
     a {
       display: block;
-      background: $secondary-color;
+      background: #C7C7C7;
       border-radius: 3px;
       color: #FFF;
-      padding: 5px;
+      padding: 10px 15px;
       transition: all .1s ease-in;
       i.fa-times-circle {
         transition: all .1s ease-in;
@@ -143,6 +143,7 @@ ul#items {
     // width: 20%;
     margin: 5px;
     flex: 1 15%;
+    max-width: 300px;
     min-width: 175px;
     //padding: 1px;
     .item-container {
