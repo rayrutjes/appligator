@@ -1,0 +1,53 @@
+doctype html
+html
+    include ./includes/head
+    body
+        header
+            img(src='img/logo@2x.png', width='176', height='95', alt='Appligator')
+
+        main
+
+            #search
+                i.fa.fa-search
+                input#search-input(type='text', placeholder='Find an app', autocomplete='off')
+                a.clean(href='#')
+                    i.fa.fa-times
+
+
+            ul#categories
+            #result
+                ul#items
+
+            #no-results
+                h3 We found absolutely nothing...
+                p ...and we are terribly sorry for that. Please try some other keywords.
+
+            .loader
+                i.fa.fa-spinner.fa-spin.fa-2x
+
+            .scroll-top
+                a#top(href="#")
+                    i.fa.fa-angle-up
+                    | &nbsp; Back to search &nbsp;
+                    i.fa.fa-angle-up
+
+        script(id='item-template', type='x-tmpl-mustache')
+            li.item(data-link="{{ link }}")
+                .item-container
+                    .item-img
+                        | {{#image}}
+                        img(src='{{ image }}', width='175', height='175', alt='{{ name }}')
+                        | {{/image}}
+                        | {{^image}}
+                        i.fa.fa-question
+                        | {{/image}}
+                    .item-content
+                        .item-category {{{ category }}}
+                        h2.item-name {{{ name }}}
+
+        script(id='category-template', type='x-tmpl-mustache')
+            li.facet-item
+                a(href='#', class='{{ itemClass }}')
+                    span.category-name {{{ name }}}
+                    span.category-count  ({{ count }})
+                    i.fa.fa-times-circle
