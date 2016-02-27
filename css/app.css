@@ -123,10 +123,10 @@ main {
     margin: 5px; }
     #categories li a {
       display: block;
-      background: #ACACAC;
+      background: #C7C7C7;
       border-radius: 3px;
       color: #FFF;
-      padding: 5px;
+      padding: 10px 15px;
       -webkit-transition: all .1s ease-in;
       transition: all .1s ease-in; }
       #categories li a i.fa-times-circle {
@@ -173,6 +173,7 @@ ul#items {
     -webkit-flex: 1 15%;
         -ms-flex: 1 15%;
             flex: 1 15%;
+    max-width: 300px;
     min-width: 175px; }
     ul#items li.item .item-container {
       border: 1px solid #F0F0F0;
