@@ -2,6 +2,8 @@
 
 A simple Algolia search showcase.
 
+[Access the demo](http://rayrutjes.github.io/appligator)
+
 *Only tested under Chrome, Firefox & IE10+.*
 
 ## Main Features.
